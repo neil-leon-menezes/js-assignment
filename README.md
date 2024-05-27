@@ -12,7 +12,10 @@ The endpoint latency increases linearly with the number of tours. Modify the end
 
 Solution:
 Index the name field in db for tours table.
-Assuming MySQL uses a B-Tree like data structure, now a lookup for name in tours table will be O(log(n)) where n is the number of tours. The trade off here is insertions will be slower (also O(log(n))) but given that for any significant user base, the number of lookups is going to greatly outweigh the addition of a new tour, this should be an easy tradeoff.
+Assuming MySQL uses a B-Tree like data structure, now a lookup for name in tours table will be O(log(n))
+where n is the number of tours. The trade off here is insertions will be slower (also O(log(n))) but given that
+for any significant user base, the number of lookups is going to greatly outweigh the addition of a new tour,
+this should be an easy tradeoff.
 ````
 
 ````
@@ -42,5 +45,6 @@ News Model
 }
 
 Solution:
-Added news table to the db and various layers - route, controller and model. Also added some validations as required. Added test cases as well. I've added an Insomnia collection 'js-app.json' to project root for example usage.
+Added news table to the db and various layers - route, controller and model. Also added some validations as required.
+Added test cases as well. I've added an Insomnia collection 'js-app.json' to project root for example usage.
 ````
